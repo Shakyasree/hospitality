@@ -1,0 +1,13 @@
+<!-- portal/templates/portal/receptionist_portal.html -->
+
+{% extends 'portal/base.html' %}
+
+{% block content %}
+    <h2>Receptionist Portal</h2>
+    <ul>
+        {% for patient in patients %}
+            <li>{{ patient.name }}</li>
+        {% endfor %}
+    </ul>
+    <a class="btn btn-primary" href="{% url 'register_patient' %}">Register Patient</a>
+{% endblock %}

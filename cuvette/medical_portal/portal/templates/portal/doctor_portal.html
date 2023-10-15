@@ -1,0 +1,12 @@
+<!-- portal/templates/portal/doctor_portal.html -->
+
+{% extends 'portal/base.html' %}
+
+{% block content %}
+    <h2>Doctor Portal</h2>
+    <ul>
+        {% for patient in patients %}
+            <li>{{ patient.name }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
